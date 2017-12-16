@@ -107,7 +107,7 @@ describe('Currency Trading', () => {
             // create the Currency
             const Currency = factory.newResource(namespace, 'Currency', 'EMA');
             Currency.description = 'Corn';
-            Currency.venue = 'Euronext';
+            Currency.venue = 'FXGO';
             Currency.quantity = 100;
             Currency.owner = factory.newRelationship(namespace, 'Trader', dan.$identifier);
 
@@ -120,9 +120,9 @@ describe('Currency Trading', () => {
             Currency.owner.$identifier.should.equal(dan.$identifier);
 
             // create the second Currency
-            const Currency2 = factory.newResource(namespace, 'Currency', 'XYZ');
-            Currency2.description = 'Soya';
-            Currency2.venue = 'Chicago';
+            const Currency2 = factory.newResource(namespace, 'Currency', 'EUR');
+            Currency2.description = 'Euro';
+            Currency2.venue = 'FXALL';
             Currency2.quantity = 50;
             Currency2.owner = factory.newRelationship(namespace, 'Trader', dan.$identifier);
 
@@ -161,12 +161,12 @@ describe('Currency Trading', () => {
                         })
                         .then(() => {
                             // use a query
-                            return businessNetworkConnection.query('selectCurrenciesByVenue', { Venue: 'Euronext' });
+                            return businessNetworkConnection.query('selectCurrenciesByVenue', { Venue: 'FXGO' });
                         })
                         .then((results) => {
                             // check results
                             results.length.should.equal(1);
-                            results[0].getIdentifier().should.equal('EMA');
+                            results[0].getIdentifier().should.equal('GBP');
                         })
                         .then(() => {
                             // use another query
@@ -175,7 +175,7 @@ describe('Currency Trading', () => {
                         .then((results) => {
                             //  check results
                             results.length.should.equal(1);
-                            results[0].getIdentifier().should.equal('EMA');
+                            results[0].getIdentifier().should.equal('GBP');
                         })
                         .then(() => {
                             // submit the remove transaction
