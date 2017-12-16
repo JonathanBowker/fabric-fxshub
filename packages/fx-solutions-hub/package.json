@@ -4,9 +4,9 @@
     },
     "name": "fx-solutions-hub",
     "version": "0.1.14",
-    "description": "Currencies Trading Business Network",
-    "networkImage": "https://hyperledger.github.io/composer-fx-solutions-hub/packages/fx-solutions-hub/networkimage.svg",
-    "networkImageanimated": "https://hyperledger.github.io/composer-fx-solutions-hub/packages/fx-solutions-hub/networkimageanimated.svg",
+    "description": "FX Solutions Hub - Post trade solutions",
+    "networkImage": "https://github.com/JonathanBowker/fabric-fxshub/blob/master/packages/fx-solutions-hub/networkimage.svg",
+    "networkImageanimated": "https://github.com/JonathanBowker/fabric-fxshub/blob/master/packages/fx-solutions-hub/networkimageanimated.svg",
     "scripts": {
         "prepublish": "mkdirp ./dist && composer archive create  --sourceType dir --sourceName . -a ./dist/fx-solutions-hub.bna",
         "pretest": "npm run lint",
@@ -20,7 +20,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/hyperledger/composer-fx-solutions-hub.git"
+        "url": "https://github.com/JonathanBowker/fabric-fxshub.git"
     },
     "keywords": [
         "Currencies",
@@ -28,7 +28,7 @@
         "composer",
         "composer-network"
     ],
-    "author": "Hyperledger Composer",
+    "author": "Innovative Integrations",
     "license": "Apache-2.0",
     "devDependencies": {
         "chai": "^3.5.0",
