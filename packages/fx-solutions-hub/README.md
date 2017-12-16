@@ -23,7 +23,7 @@ Create two `Trader` participants:
 ```
 {
   "$class": "fx.solutions.hub.Trader",
-  "tradeId": "TRADER1",
+  "traderId": "TRADER1",
   "companyName": "Some Trade PLC",
   "companyLEI": "7789UHT667Y",
   "firstName": "Jenny",
@@ -34,7 +34,7 @@ Create two `Trader` participants:
 ```
 {
   "$class": "fx.solutions.hub.Trader",
-  "tradeId": "TRADER2",
+  "traderId": "TRADER2",
   "companyName": "Another Trade PLC",
   "companyLEI": "7789UHT667Y",
   "firstName": "Jenny",

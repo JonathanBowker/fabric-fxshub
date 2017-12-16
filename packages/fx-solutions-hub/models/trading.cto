@@ -11,8 +11,8 @@ asset Currency identified by currencyCode {
     --> Trader owner
 }
 
-participant Trader identified by tradeId {
-    o String tradeId
+participant Trader identified by traderId {
+    o String traderId
     o String companyName
     o String companyLEI    
     o String firstName

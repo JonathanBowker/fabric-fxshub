@@ -105,8 +105,8 @@ describe('Currency Trading', () => {
             simon.lastName = 'Stone';
 
             // create the Currency
-            const Currency = factory.newResource(namespace, 'Currency', 'EMA');
-            Currency.description = 'Corn';
+            const Currency = factory.newResource(namespace, 'Currency', 'GBP');
+            Currency.description = 'Sterling';
             Currency.venue = 'FXGO';
             Currency.quantity = 100;
             Currency.owner = factory.newRelationship(namespace, 'Trader', dan.$identifier);
@@ -166,7 +166,7 @@ describe('Currency Trading', () => {
                         .then((results) => {
                             // check results
                             results.length.should.equal(1);
-                            results[0].getIdentifier().should.equal('GBP');
+                            results[0].getIdentifier().should.equal('EUR');
                         })
                         .then(() => {
                             // use another query
@@ -175,7 +175,7 @@ describe('Currency Trading', () => {
                         .then((results) => {
                             //  check results
                             results.length.should.equal(1);
-                            results[0].getIdentifier().should.equal('GBP');
+                            results[0].getIdentifier().should.equal('EUR');
                         })
                         .then(() => {
                             // submit the remove transaction
@@ -189,7 +189,7 @@ describe('Currency Trading', () => {
                         .then((results) => {
                             // check results, should only have 1 Currency left
                             results.length.should.equal(1);
-                            results[0].getIdentifier().should.equal('XYZ');
+                            results[0].getIdentifier().should.equal('GBP');
                         });
                 });
         });
